@@ -1,5 +1,5 @@
 <script setup>
-import { reactive, ref } from 'vue'
+import { reactive } from 'vue'
 import Alert from '../components/Alert.vue'
 import Table from '../components/Table.vue'
 const alert = reactive({

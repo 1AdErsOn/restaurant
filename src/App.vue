@@ -1,19 +1,19 @@
 <script setup>
-import Navbar from './components/Navbar.vue'
-import Footer from './components/Footer.vue'
+import OwnNavbar from './components/OwnNavbar.vue'
+import OwnFooter from './components/OwnFooter.vue'
 import { ref } from 'vue'
 const userMenu = ref(true)
-const loged = ref(true)
+const loged = ref(false)
 </script>
 
 <template>
-  <Navbar :isUser="userMenu" :loged="loged" />
+  <OwnNavbar :isUser="userMenu" :loged="loged" />
 
   <div class="container">
     <!-- Content here -->
     <RouterView />
   </div>
-  <Footer />
+  <OwnFooter />
 </template>
 
 <style scoped></style>

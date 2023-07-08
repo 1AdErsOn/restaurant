@@ -1,5 +1,5 @@
 <script setup>
-import Perfil from '../components/Perfil.vue'
+import Perfil from '../components/auth/Perfil.vue'
 </script>
 
 <template>

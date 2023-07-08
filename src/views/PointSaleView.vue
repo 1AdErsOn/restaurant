@@ -1,5 +1,5 @@
 <script setup>
-import PuntoVenta from '../components/PuntoVenta.vue'
+import OwnSale from '../components/point_sale/OwnSale.vue'
 import { ref } from 'vue'
 const ventas = ref(true)
 </script>
@@ -7,7 +7,7 @@ const ventas = ref(true)
 <template>
   <div class="card mt-5">
     <div class="card-body">
-      <PuntoVenta v-if="ventas" />
+      <OwnSale v-if="ventas" />
     </div>
   </div>
 </template>

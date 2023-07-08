@@ -44,7 +44,7 @@ const options = ref(false)
         </ul>
         <ul v-else class="nav mb-2 mb-lg-0">
           <li class="nav-item me-3">
-            <RouterLink class="btn btn-outline-light" aria-current="page" to="/login"
+            <RouterLink class="btn btn-outline-light" aria-current="page" to="/auth"
               >START</RouterLink
             >
           </li>
