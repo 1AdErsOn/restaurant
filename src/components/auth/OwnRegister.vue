@@ -1,6 +1,6 @@
 <script setup>
 import { reactive } from 'vue';
-import Alert from '../Alert.vue'
+import OwnAlert from '../OwnAlert.vue'
 defineProps({
   register:{
     required: true,
@@ -22,7 +22,7 @@ const showAlert = (message, variant = 'warning') => {
 
 <template>
   <form method="POST" v-show="register">
-    <Alert :show="alert.show" :message="alert.message" />
+    <OwnAlert :show="alert.show" :message="alert.message" />
     <div class="mb-3 row">
       <label for="name" class="col-md-4 col-form-label text-md-end">Name</label>
       <div class="col-md-6">

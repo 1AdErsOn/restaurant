@@ -1,7 +1,7 @@
 <script setup>
 import { reactive } from 'vue'
-import Alert from '../components/Alert.vue'
-import Table from '../components/Table.vue'
+import OwnAlert from '../components/OwnAlert.vue'
+import OwnTable from '../components/OwnTable.vue'
 const alert = reactive({
   message: 'Users',
   variant: '',
@@ -17,8 +17,8 @@ const showAlert = (message, variant = 'warning') => {
 <template>
   <div class="card mt-3">
     <div class="card-body">
-      <Alert :show="alert.show" :message="alert.message" />
-      <Table>
+      <OwnAlert :show="alert.show" :message="alert.message" />
+      <OwnTable>
         <template #head>
           <tr>
             <th scope="col">#</th>
@@ -49,7 +49,7 @@ const showAlert = (message, variant = 'warning') => {
             </td>
           </tr>
         </template>
-      </Table>
+      </OwnTable>
     </div>
   </div>
 </template>
