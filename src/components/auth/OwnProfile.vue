@@ -112,9 +112,8 @@ fetchRoles(props.isAdmin)
               <select class="form-select" aria-label="Default select example">
                 <option value="">Select a role:</option>
                 <option value="administrator">Administrator</option>
-                <option value="registered">Registered</option>
-                <option value="edtior">Editor</option>
-                <option value="guest">Guest</option>
+                <option value="registered">Usuario</option>
+                <option value="edtior">Cliente</option>
               </select>
             </div>
             <!-- Submit button-->

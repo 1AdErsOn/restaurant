@@ -1,14 +1,15 @@
 <script setup>
-import OwnProfile from '../components/auth/OwnProfile.vue'
-
+import OwnSupplier from '../components/supplier/OwnSupplier.vue'
 </script>
 
 <template>
   <div class="container">
     <div class="card mt-3">
       <div class="card-body">
-        <OwnProfile :isAdmin="true" />
+        <OwnSupplier />
       </div>
     </div>
   </div>
 </template>
+
+<style scoped></style>

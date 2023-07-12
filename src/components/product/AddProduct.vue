@@ -25,6 +25,15 @@ const handleChange = () => {
           <label class="small mb-1" for="addName">Nombre:</label>
           <input class="form-control" id="addName" type="text" placeholder="Enter Product Name" />
         </div>
+        <!-- Form Group (Supplier)-->
+        <div class="mb-3">
+          <label class="small mb-1">Proveedor</label>
+          <select class="form-select">
+            <option value="">Select a Category:</option>
+            <option value="1">Rico Pollo</option>
+            <option value="2">Inca Cola</option>
+          </select>
+        </div>
         <!-- Form Group (Type)-->
         <div class="mb-3">
           <label class="small mb-1" for="addType">Tipo:</label>

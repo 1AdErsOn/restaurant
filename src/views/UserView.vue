@@ -1,55 +1,13 @@
 <script setup>
-import { reactive } from 'vue'
-import OwnAlert from '../components/OwnAlert.vue'
-import OwnTable from '../components/OwnTable.vue'
-const alert = reactive({
-  message: 'Users',
-  variant: '',
-  show: true
-})
-const showAlert = (message, variant = 'warning') => {
-  alert.message = message
-  alert.variant = variant
-  alert.show = true
-}
+import OwnUser from '../components/supplier/OwnUser.vue'
 </script>
 
 <template>
-  <div class="card mt-3">
-    <div class="card-body">
-      <OwnAlert :show="alert.show" :message="alert.message" />
-      <OwnTable>
-        <template #head>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
-          </tr>
-        </template>
-        <template #body>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry the Bird</td>
-            <td>@twitter</td>
-            <td>
-              <button class="btn btn-success" @click="$router.push('/profile')">Perfil</button>
-            </td>
-          </tr>
-        </template>
-      </OwnTable>
+  <div class="container">
+    <div class="card mt-3">
+      <div class="card-body">
+        <OwnUser />
+      </div>
     </div>
   </div>
 </template>

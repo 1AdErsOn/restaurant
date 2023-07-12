@@ -7,9 +7,7 @@ import OwnProducts from '../components/product/OwnProducts.vue'
   <div class="container">
     <div class="card mt-3">
       <div class="card-body">
-        <div class="row">
-          <OwnProducts />
-        </div>
+        <OwnProducts />
       </div>
     </div>
   </div>

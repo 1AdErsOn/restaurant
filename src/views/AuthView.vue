@@ -13,20 +13,22 @@ const toggle = (value) => {
 </script>
 
 <template>
-  <div class="row justify-content-center mt-3">
-    <div class="col-md-8">
-      <div class="card">
-        <nav class="menu">
-          <div class="nav nav-tabs" id="nav-tab" role="tablist">
-            <button class="nav-link" :class="{ active: login }" @click="toggle(true)">LOGIN</button>
-            <button class="nav-link" :class="{ active: register }" @click="toggle(false)">
-              REGISTER
-            </button>
+  <div class="container">
+    <div class="row justify-content-center mt-3">
+      <div class="col-md-6">
+        <div class="card">
+          <nav class="menu">
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <button class="nav-link" :class="{ active: login }" @click="toggle(true)">LOGIN</button>
+              <button class="nav-link" :class="{ active: register }" @click="toggle(false)">
+                REGISTER
+              </button>
+            </div>
+          </nav>
+          <div class="card-body">
+            <OwnLogin :login="login" />
+            <OwnRegister :register="register" />
           </div>
-        </nav>
-        <div class="card-body">
-          <OwnLogin :login="login" />
-          <OwnRegister :register="register" />
         </div>
       </div>
     </div>

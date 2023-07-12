@@ -1,9 +1,9 @@
 <script setup>
-import Table from './Table.vue'
+import OwnTable from '../OwnTable.vue'
 </script>
 
 <template>
-  <Table>
+  <OwnTable>
     <template #head>
       <tr>
         <th>Sesion</th>
@@ -18,5 +18,5 @@ import Table from './Table.vue'
         <td>3</td>
       </tr>
     </template>
-  </Table>
+  </OwnTable>
 </template>

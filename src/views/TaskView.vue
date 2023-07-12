@@ -24,13 +24,15 @@ const handleNewBoard = () => {
 <template>
   <div class="container">
     <div class="row justify-content-between mt-3">
-      <button class="col-3 btn btn-outline-primary border fw-bold" @click="handleNewBoard">
-        + Add a new Card
-      </button>
-      <h2 v-if="isLoading">Loading Boards</h2>
-      <button class="col-3 btn btn-outline-success border fw-bold" @click="handleNewBoard">
-        / Save Tasks
-      </button>
+      <div class="d-flex align-items-start justify-content-between mb-3">
+        <button class="d-flex btn btn-outline-primary border fw-bold" @click="handleNewBoard">
+          + Add a new Card
+        </button>
+        <h2 class="d-flex" v-if="isLoading">Loading Boards</h2>
+        <button class="d-flex btn btn-outline-success border fw-bold" @click="handleNewBoard">
+          / Save Tasks
+        </button>
+      </div>
     </div>
     <OwnTasks />
   </div>

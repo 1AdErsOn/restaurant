@@ -21,7 +21,7 @@ const isShow = ref(props.show)
 
 <template>
   <div class="alert alert-warning alert-dismissible" role="alert" v-show="isShow">
-    <strong>{{ message }}</strong> You should check in on some of those fields below.
+    <strong>{{ message }}</strong> .....
     <button
       type="button"
       class="btn-close"
