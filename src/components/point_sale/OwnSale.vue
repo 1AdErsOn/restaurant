@@ -1,4 +1,5 @@
 <script setup>
+import OwnList from '../OwnList.vue'
 import System from './System.vue'
 </script>
 
@@ -7,26 +8,7 @@ import System from './System.vue'
     <!-- Sidebar-->
     <div class="border-end">
       <div class="h5 border-bottom">Sistema de Venta</div>
-      <div class="list-group list-group-flush">
-        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!"
-          >Dashboard</a
-        >
-        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!"
-          >Shortcuts</a
-        >
-        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!"
-          >Overview</a
-        >
-        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!"
-          >Events</a
-        >
-        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!"
-          >Profile</a
-        >
-        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!"
-          >Status</a
-        >
-      </div>
+      <OwnList />
     </div>
     <!-- Page content wrapper-->
     <div id="page-content-wrapper">

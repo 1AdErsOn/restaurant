@@ -1,6 +1,5 @@
 <script setup>
 import Table from './Table.vue'
-
 </script>
 
 <template>

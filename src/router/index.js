@@ -6,6 +6,7 @@ import AdminView from '../views/AdminView.vue'
 import UserView from '../views/UserView.vue'
 import PointSaleView from '../views/PointSaleView.vue'
 import ProductView from '../views/ProductView.vue'
+import TaskView from '../views/TaskView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -44,6 +45,11 @@ const router = createRouter({
       path: '/product',
       name: 'product',
       component: ProductView
+    },
+    {
+      path: '/task',
+      name: 'task',
+      component: TaskView
     }
   ]
 })

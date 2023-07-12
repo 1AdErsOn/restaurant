@@ -39,6 +39,12 @@ const options = ref(false)
             >
           </li>
           <li class="nav-item">
+            <RouterLink class="nav-link" aria-current="page" to="/task">Tareas</RouterLink>
+          </li>
+          <li class="nav-item">
+            <RouterLink class="nav-link" aria-current="page" to="/product">Productos</RouterLink>
+          </li>
+          <li class="nav-item">
             <a class="nav-link disabled">Disabled</a>
           </li>
         </ul>

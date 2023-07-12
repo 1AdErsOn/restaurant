@@ -1,8 +1,13 @@
 <script setup>
 import OwnTable from '../OwnTable.vue'
-const emit = defineEmits(['updateProduct'])
-const handleUpdate = (id) => {
-  emit('updateProduct', id)
+import AddProduct from './AddProduct.vue'
+import UpdateProduct from './UpdateProduct.vue'
+import { ref } from 'vue'
+
+const identy = ref(false)
+const handleUpdate = (id = '') => {
+  identy.value = true
+  console.log('Get id: ' + id)
 }
 </script>
 
@@ -35,4 +40,6 @@ const handleUpdate = (id) => {
       </template>
     </OwnTable>
   </div>
+  <AddProduct />
+  <UpdateProduct :identy="identy" @close-modal="identy = false" />
 </template>

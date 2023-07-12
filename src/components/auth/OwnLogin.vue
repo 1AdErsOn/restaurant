@@ -1,8 +1,8 @@
 <script setup>
-import { reactive } from 'vue';
+import { reactive } from 'vue'
 import OwnAlert from '../OwnAlert.vue'
 defineProps({
-  login:{
+  login: {
     required: true,
     type: Boolean,
     default: false

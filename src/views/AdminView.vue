@@ -1,11 +1,5 @@
-<script setup>
+<script setup></script>
 
-</script>
+<template>Admin</template>
 
-<template>
-  Admin
-</template>
-
-<style scoped>
-
-</style>
+<style scoped></style>

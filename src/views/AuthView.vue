@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
-import OwnLogin from '../components/auth/OwnLogin.vue';
-import OwnRegister from '../components/auth/OwnRegister.vue';
+import OwnLogin from '../components/auth/OwnLogin.vue'
+import OwnRegister from '../components/auth/OwnRegister.vue'
 
 const login = ref(true)
 const register = ref(false)
