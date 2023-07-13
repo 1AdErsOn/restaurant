@@ -8,12 +8,10 @@ const loged = ref(true)
 
 <template>
   <OwnNavbar :isUser="userMenu" :loged="loged" />
-
   <!-- Content here -->
   <main>
     <RouterView />
   </main>
-
   <OwnFooter />
 </template>
 

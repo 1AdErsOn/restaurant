@@ -1,5 +1,7 @@
 <script setup>
 import { ref } from 'vue'
+import ItemNavbar from './ItemNavbar.vue'
+import MenuItems from '../mocks/menu.js'
 const props = defineProps({
   isUser: {
     required: true,
@@ -17,43 +19,32 @@ const props = defineProps({
     default: true
   }
 })
-const show = ref(props.menu)
+const collapsed = ref(props.menu)
 const ismenu = ref(true)
 const options = ref(false)
+/* const handleNavigation = (idLink = 0) => {
+  console.log(idLink);
+  MenuItems.forEach(item => {
+    if (item.id === idLink) {
+      item.active = true
+    } else {
+      if (item.active) {
+        item.active = false
+      }
+    }
+  })
+} */
 </script>
 
 <template>
-  <nav class="navbar bg-primary border-bottom border-bottom-dark">
+  <nav class="navbar bg-primary">
     <div class="container-fluid">
-      <span class="navbar-brand mb-0 h1">La Gran Parada</span>
-      <div v-show="show && ismenu">
+      <RouterLink class="navbar-brand mb-0 h1" aria-current="page" to="/">La Gran Parada</RouterLink>
+      <div class="collapse navbar-collapse" :class="{show:collapsed}" v-show="collapsed && ismenu">
         <ul v-if="loged" class="nav justify-content-center nav-underline mb-2 mb-lg-0">
-          <li class="nav-item">
-            <RouterLink class="nav-link" aria-current="page" to="/">Inicio</RouterLink>
-          </li>
-          <li class="nav-item">
-            <RouterLink class="nav-link" aria-current="page" to="/user">Usuarios</RouterLink>
-          </li>
-          <li class="nav-item">
-            <RouterLink class="nav-link" aria-current="page" to="/point-sale"
-              >Punto de Venta</RouterLink
-            >
-          </li>
-          <li class="nav-item">
-            <RouterLink class="nav-link" aria-current="page" to="/task">Tareas</RouterLink>
-          </li>
-          <li class="nav-item">
-            <RouterLink class="nav-link" aria-current="page" to="/product">Productos</RouterLink>
-          </li>
-          <li class="nav-item">
-            <RouterLink class="nav-link" aria-current="page" to="/daily">Session</RouterLink>
-          </li>
-          <li class="nav-item">
-            <RouterLink class="nav-link" aria-current="page" to="/admin">Configuracion</RouterLink>
-          </li>
-          <li class="nav-item">
-            <RouterLink class="nav-link" aria-current="page" to="/supplier">Proveedores</RouterLink>
-          </li>
+          <template v-for="item of MenuItems" :key="item.id">
+            <ItemNavbar :link-data="item"/>
+          </template>
         </ul>
         <ul v-else class="nav mb-2 mb-lg-0">
           <li class="nav-item me-3">
@@ -84,7 +75,7 @@ const options = ref(false)
         type="button"
         data-bs-toggle="collapse"
         aria-expanded="false"
-        @click="show = !show"
+        @click="collapsed = !collapsed"
       >
         <span class="navbar-toggler-icon"></span>
       </button>

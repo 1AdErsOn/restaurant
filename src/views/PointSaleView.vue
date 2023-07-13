@@ -5,9 +5,9 @@ const ventas = ref(true)
 </script>
 
 <template>
-  <div class="container">
+  <div class="container-fluid">
     <div class="card mt-5">
-      <div class="card-body">
+      <div class="card-body p-0">
         <OwnSale v-if="ventas" />
       </div>
     </div>

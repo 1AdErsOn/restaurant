@@ -4,16 +4,16 @@ import System from './System.vue'
 </script>
 
 <template>
-  <div class="d-flex" id="wrapper">
+  <div class="d-flex">
     <!-- Sidebar-->
     <div class="border-end">
-      <div class="h5 border-bottom">Sistema de Venta</div>
+      <div class="h5 border-bottom p-1">Categorias:</div>
       <OwnList />
     </div>
     <!-- Page content wrapper-->
-    <div id="page-content-wrapper">
+    <div>
       <!-- Top navigation-->
-      <nav class="navbar navbar-expand-lg navbar-info border-bottom">
+      <nav class="navbar navbar-expand-lg border-bottom">
         <div class="container-fluid">
           <form class="d-flex" role="search">
             <input
