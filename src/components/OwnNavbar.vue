@@ -39,14 +39,20 @@ const options = ref(false)
 <template>
   <nav class="navbar bg-primary">
     <div class="container-fluid">
-      <RouterLink class="navbar-brand mb-0 h1" aria-current="page" to="/">La Gran Parada</RouterLink>
-      <div class="collapse navbar-collapse" :class="{show:collapsed}" v-show="collapsed && ismenu">
+      <RouterLink class="navbar-brand mb-0 h1" aria-current="page" to="/"
+        >La Gran Parada</RouterLink
+      >
+      <div
+        class="collapse navbar-collapse"
+        :class="{ show: collapsed }"
+        v-show="collapsed && ismenu"
+      >
         <ul v-if="loged" class="nav justify-content-center nav-underline mb-2 mb-lg-0">
           <template v-for="item of MenuItems" :key="item.id">
-            <ItemNavbar :link-data="item"/>
+            <ItemNavbar :link-data="item" />
           </template>
         </ul>
-        <ul v-else class="nav mb-2 mb-lg-0">
+        <ul v-else class="nav justify-content-center mb-2 mb-lg-0">
           <li class="nav-item me-3">
             <RouterLink class="btn btn-outline-light" aria-current="page" to="/auth"
               >START</RouterLink

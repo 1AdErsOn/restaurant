@@ -1,6 +1,5 @@
 <script setup>
-import OwnStock from '../components/product/OwnStock.vue';
-
+import OwnStock from '../components/product/OwnStock.vue'
 </script>
 
 <template>

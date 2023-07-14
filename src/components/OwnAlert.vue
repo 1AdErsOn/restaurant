@@ -1,32 +1,23 @@
 <script setup>
-import { ref } from 'vue'
+import { alertPropColor, useAlertColor } from '../composables/alertColor'
 
 const props = defineProps({
-  variant: {
-    required: false,
-    type: String,
-    default: 'warning'
-  },
-  message: {
-    required: true,
-    type: String
-  },
-  show: {
-    required: true,
-    type: Boolean
-  }
+  message: String,
+  show: Boolean,
+  ...alertPropColor
 })
-const isShow = ref(props.show)
+defineEmits(['closeAlert'])
+const style = useAlertColor(props)
 </script>
 
 <template>
-  <div class="alert alert-warning alert-dismissible" role="alert" v-show="isShow">
-    <strong>{{ message }}</strong> .....
+  <div class="alert alert-dismissible" :class="style" role="alert" v-if="show">
+    <strong>{{ message }}</strong> 
     <button
       type="button"
       class="btn-close"
       data-bs-dismiss="alert"
-      @click="isShow = false"
+      @click="$emit('closeAlert')"
     ></button>
   </div>
 </template>

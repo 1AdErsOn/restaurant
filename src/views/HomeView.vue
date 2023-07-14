@@ -29,9 +29,9 @@
               images to sections of your page.
             </p>
             <p class="mb-0">
-              The universe is almost 14 billion years old, and, wow! Life had no problem starting here
-              on Earth! I think it would be inexcusably egocentric of us to suggest that we're alone
-              in the universe.
+              The universe is almost 14 billion years old, and, wow! Life had no problem starting
+              here on Earth! I think it would be inexcusably egocentric of us to suggest that we're
+              alone in the universe.
             </p>
           </div>
         </div>

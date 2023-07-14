@@ -1,10 +1,10 @@
 <script setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
 
 const prop = defineProps({
-  linkData:{
+  linkData: {
     required: true,
-    type: Object,
+    type: Object
   }
 })
 //const emit = defineEmits(['isNaved'])
@@ -17,9 +17,10 @@ const clicked = ref(prop.linkData.active)
 
 <template>
   <li class="nav-item" @click="clicked = true">
-    <RouterLink class="nav-link fw-bold" :class="{active:clicked}" :to="linkData.url">{{ linkData.tittle }}</RouterLink>
+    <RouterLink class="nav-link fw-bold" :class="{ active: clicked }" :to="linkData.url">{{
+      linkData.tittle
+    }}</RouterLink>
   </li>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

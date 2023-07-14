@@ -19,7 +19,9 @@ const toggle = (value) => {
         <div class="card">
           <nav class="menu">
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
-              <button class="nav-link" :class="{ active: login }" @click="toggle(true)">LOGIN</button>
+              <button class="nav-link" :class="{ active: login }" @click="toggle(true)">
+                LOGIN
+              </button>
               <button class="nav-link" :class="{ active: register }" @click="toggle(false)">
                 REGISTER
               </button>

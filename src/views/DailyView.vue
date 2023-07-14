@@ -1,6 +1,5 @@
 <script setup>
 import OwnDaily from '../components/daily/OwnDaily.vue'
-
 </script>
 
 <template>

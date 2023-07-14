@@ -1,5 +1,5 @@
 <script setup>
-import { reactive, ref } from 'vue';
+import { reactive, ref } from 'vue'
 import OwnCard from '../OwnCard.vue'
 
 const props = defineProps({
@@ -12,7 +12,7 @@ const props = defineProps({
     required: false,
     type: Number,
     default: 0
-  },
+  }
 })
 const fetchRoles = (permiso = false) => {
   if (permiso) {
@@ -33,12 +33,8 @@ const modelUser = reactive({
   role: ''
 })
 const handleUpdatePass = () => {
-  if (
-    modelPass.curPass == '' ||
-    modelPass.newPass == '' ||
-    modelPass.confNewPass == ''
-  ) {
-    //alert 
+  if (modelPass.curPass == '' || modelPass.newPass == '' || modelPass.confNewPass == '') {
+    //alert
     return
   } else if (modelPass.newPass !== modelPass.confNewPass) {
     //alert
@@ -54,7 +50,7 @@ const handleUpdateUser = () => {
     modelUser.email == '' ||
     modelUser.role == ''
   ) {
-    //alert 
+    //alert
     return
   }
   console.log(modelUser)
@@ -75,11 +71,7 @@ const handleDeleteUser = () => {
         <template #body>
           <div class="text-center">
             <!-- Profile picture image-->
-            <img
-              class="img-account-profile rounded-circle mb-2"
-              :src="image"
-              alt=""
-            />
+            <img class="img-account-profile rounded-circle mb-2" :src="image" alt="" />
             <!-- Profile picture help block-->
             <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB</div>
             <!-- Profile picture upload button-->
@@ -96,15 +88,30 @@ const handleDeleteUser = () => {
             <form @submit.prevent="handleUpdatePass">
               <div class="mb-2">
                 <label for="curPass" class="form-label">Current Password</label>
-                <input v-model="modelPass.curPass" type="password" class="form-control" id="curPass" />
+                <input
+                  v-model="modelPass.curPass"
+                  type="password"
+                  class="form-control"
+                  id="curPass"
+                />
               </div>
               <div class="mb-2">
                 <label for="newPass" class="form-label">New Password</label>
-                <input v-model="modelPass.newPass" type="password" class="form-control" id="newPass" />
+                <input
+                  v-model="modelPass.newPass"
+                  type="password"
+                  class="form-control"
+                  id="newPass"
+                />
               </div>
               <div class="mb-2">
                 <label for="confNewPass" class="form-label">Confirm New Password</label>
-                <input v-model="modelPass.confNewPass" type="password" class="form-control" id="confNewPass" />
+                <input
+                  v-model="modelPass.confNewPass"
+                  type="password"
+                  class="form-control"
+                  id="confNewPass"
+                />
               </div>
               <div class="text-end">
                 <button class="btn btn-outline-primary" type="submit">Reset Password</button>

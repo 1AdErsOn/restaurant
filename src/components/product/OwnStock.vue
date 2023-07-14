@@ -1,6 +1,5 @@
 <script setup>
-import OwnTable from '../OwnTable.vue';
-
+import OwnTable from '../OwnTable.vue'
 </script>
 
 <template>
@@ -17,12 +16,7 @@ import OwnTable from '../OwnTable.vue';
           </select>
         </div>
         <div class="d-flex">
-          <input
-              class="form-control"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
+          <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
         </div>
       </div>
       <OwnTable>

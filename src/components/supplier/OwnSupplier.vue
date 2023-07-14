@@ -2,7 +2,7 @@
 import { reactive } from 'vue'
 import OwnAlert from '../OwnAlert.vue'
 import OwnTable from '../OwnTable.vue'
-import ItemSupplier from './ItemSupplier.vue';
+import ItemSupplier from './ItemSupplier.vue'
 const alert = reactive({
   message: 'Users',
   variant: '',
@@ -29,20 +29,15 @@ const showAlert = (message, variant = 'warning') => {
         </div>
         <OwnAlert class="mb-0" :show="alert.show" :message="alert.message" />
         <div class="d-flex">
-          <input
-            class="form-control"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
+          <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
         </div>
       </div>
       <div class="input-group">
         <span class="input-group-text">Proveedor</span>
-        <input type="text" class="form-control" placeholder="Nombre">
-        <input type="text" class="form-control" placeholder="Direccion">
-        <input type="text" class="form-control" placeholder="Contactar A">
-        <input type="number" class="form-control" placeholder="# de Contacto">
+        <input type="text" class="form-control" placeholder="Nombre" />
+        <input type="text" class="form-control" placeholder="Direccion" />
+        <input type="text" class="form-control" placeholder="Contactar A" />
+        <input type="number" class="form-control" placeholder="# de Contacto" />
         <select class="form-select">
           <option selected>Estado</option>
           <option value="1">Activo</option>
@@ -67,7 +62,6 @@ const showAlert = (message, variant = 'warning') => {
         </template>
       </OwnTable>
     </div>
-    
   </div>
 </template>
 

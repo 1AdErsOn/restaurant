@@ -1,5 +1,5 @@
 <script setup>
-import OwnCard from '../OwnCard.vue';
+import OwnCard from '../OwnCard.vue'
 </script>
 
 <template>

@@ -5,9 +5,7 @@ import OwnCard from '../OwnCard.vue'
 <template>
   <OwnCard>
     <template #head>Informacion de la compañia</template>
-    <template #body>
-      form
-    </template>
+    <template #body> form </template>
   </OwnCard>
 </template>
 

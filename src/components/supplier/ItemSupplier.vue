@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
 
 const edit = ref(false)
 </script>
@@ -22,10 +22,10 @@ const edit = ref(false)
     <td colspan="7">
       <div class="input-group">
         <span class="input-group-text">1</span>
-        <input type="text" class="form-control" placeholder="Nombre">
-        <input type="text" class="form-control" placeholder="Direccion">
-        <input type="text" class="form-control" placeholder="Contactar A">
-        <input type="number" class="form-control" placeholder="# de Contacto">
+        <input type="text" class="form-control" placeholder="Nombre" />
+        <input type="text" class="form-control" placeholder="Direccion" />
+        <input type="text" class="form-control" placeholder="Contactar A" />
+        <input type="number" class="form-control" placeholder="# de Contacto" />
         <select class="form-select">
           <option selected>Estado</option>
           <option value="1">Activo</option>

@@ -2,8 +2,8 @@
 import OwnNavbar from './components/OwnNavbar.vue'
 import OwnFooter from './components/OwnFooter.vue'
 import { ref } from 'vue'
-const userMenu = ref(true)
-const loged = ref(true)
+const userMenu = ref(false)
+const loged = ref(false)
 </script>
 
 <template>

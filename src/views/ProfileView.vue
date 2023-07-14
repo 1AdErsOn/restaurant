@@ -1,6 +1,5 @@
 <script setup>
 import OwnProfile from '../components/auth/OwnProfile.vue'
-
 </script>
 
 <template>

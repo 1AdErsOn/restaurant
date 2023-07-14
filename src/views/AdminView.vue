@@ -1,9 +1,7 @@
 <script setup>
-import CompanyInfo from '../components/setting/CompanyInfo.vue';
-import PrintInfo from '../components/setting/PrintInfo.vue';
-import SystenInfo from '../components/setting/SystenInfo.vue';
-
-
+import CompanyInfo from '../components/setting/CompanyInfo.vue'
+import PrintInfo from '../components/setting/PrintInfo.vue'
+import SystenInfo from '../components/setting/SystenInfo.vue'
 </script>
 
 <template>

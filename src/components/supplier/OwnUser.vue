@@ -29,12 +29,7 @@ const showAlert = (message, variant = 'warning') => {
         </div>
         <OwnAlert class="mb-0" :show="alert.show" :message="alert.message" />
         <div class="d-flex">
-          <input
-            class="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
           <button class="btn btn-outline-primary" type="submit">Crear</button>
         </div>
       </div>
@@ -57,7 +52,9 @@ const showAlert = (message, variant = 'warning') => {
               <span class="badge rounded-pill text-bg-light">Admin</span>
             </td>
             <td>
-              <button class="btn btn-outline-success" @click="$router.push('/profile')">Perfil</button>
+              <button class="btn btn-outline-success" @click="$router.push('/profile')">
+                Perfil
+              </button>
             </td>
           </tr>
         </template>
@@ -66,9 +63,7 @@ const showAlert = (message, variant = 'warning') => {
     <div class="col-xl-4">
       <OwnCard>
         <template #head>Informacion del Usuario</template>
-        <template #body>
-          data
-        </template>
+        <template #body> data </template>
       </OwnCard>
     </div>
   </div>
