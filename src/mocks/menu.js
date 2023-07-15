@@ -75,5 +75,12 @@ export default [
     icon: 'fa-fire',
     url: '/daily',
     active: false
+  },
+  {
+    id: 12,
+    tittle: 'Registro',
+    icon: 'fa-fire',
+    url: '/register',
+    active: false
   }
 ]

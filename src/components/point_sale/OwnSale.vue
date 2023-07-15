@@ -1,35 +1,48 @@
 <script setup>
-import OwnList from '../OwnList.vue'
-import System from './System.vue'
+import { ref } from 'vue'
+import Ownfilter from '../OwnList.vue'
+import OwnSystem from './OwnSystem.vue'
+
+const emit = defineEmits(['showOrders'])
+const search = ref('')
+const handleSearch = () => {
+  console.log(search.value)
+}
+const handleShowOrder = () => {
+  //validation close
+  emit('showOrders')
+}
 </script>
 
 <template>
   <div class="d-flex">
     <!-- Sidebar-->
     <div class="border-end">
-      <div class="h5 border-bottom p-1">Categorias:</div>
-      <OwnList />
+      <div class="h5 border-bottom p-2">Categorias:</div>
+      <Ownfilter />
     </div>
     <!-- Page content wrapper-->
     <div>
       <!-- Top navigation-->
       <nav class="navbar navbar-expand-lg border-bottom">
         <div class="container-fluid">
-          <form class="d-flex" role="search">
+          <div class="d-flex" role="search">
             <input
+              v-model="search"
               class="form-control me-2"
               type="search"
               placeholder="Search"
-              aria-label="Search"
+              @keyup="handleSearch"
             />
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-          <button type="button" class="btn btn-outline-danger">Danger</button>
+          </div>
+          <button class="btn btn-outline-primary" type="button" @click="handleShowOrder">
+            Ventas
+          </button>
         </div>
       </nav>
       <!-- Page content-->
       <div class="container-fluid">
-        <System />
+        <OwnSystem />
       </div>
     </div>
   </div>

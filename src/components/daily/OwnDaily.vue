@@ -9,6 +9,7 @@ import OwnTable from '../OwnTable.vue'
         <th>Sesion</th>
         <th>Date</th>
         <th>Acctions</th>
+        <th>Estate</th>
       </tr>
     </template>
     <template #body>
@@ -16,6 +17,7 @@ import OwnTable from '../OwnTable.vue'
         <td>1</td>
         <td>2</td>
         <td>3</td>
+        <td>4</td>
       </tr>
     </template>
   </OwnTable>

@@ -1,20 +1,13 @@
 <script setup>
 import { reactive } from 'vue'
 import OwnAlert from '../OwnAlert.vue'
-defineProps({
-  login: {
-    required: true,
-    type: Boolean,
-    default: false
-  }
-})
 const user = reactive({
   email: '',
   password: ''
 })
 const alert = reactive({
   message: '',
-  variant: '',
+  variant: 'success',
   show: false
 })
 const showAlert = (message, variant = 'warning') => {
@@ -22,12 +15,9 @@ const showAlert = (message, variant = 'warning') => {
   alert.variant = variant
   alert.show = true
 }
-const closeAlert = () => {
-  alert.show = false
-}
 const handleLogin = () => {
   if (user.email == '' || user.password == '') {
-    showAlert('Todos los campos son requeridos', 'danger')
+    showAlert('Todos los campos son requeridos')
     return
   }
   //loginUser
@@ -36,12 +26,12 @@ const handleLogin = () => {
 </script>
 
 <template>
-  <form v-show="login" @submit.prevent="handleLogin">
+  <form @submit.prevent="handleLogin">
     <OwnAlert
       :show="alert.show"
       :variant="alert.variant"
       :message="alert.message"
-      @close-alert="closeAlert"
+      @close-alert="alert.show = false"
     />
     <div class="mb-3 row">
       <label for="email" class="col-md-4 col-form-label text-md-end">Email</label>

@@ -11,6 +11,7 @@ const AdminView = () => import('../views/AdminView.vue')
 const SupplierView = () => import('../views/SupplierView.vue')
 const StockView = () => import('../views/StockView.vue')
 const ReceivedView = () => import('../views/ReceivedView.vue')
+const RegisterView = () => import('../views/RegisterView.vue')
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -74,6 +75,11 @@ const router = createRouter({
       path: '/received',
       name: 'received',
       component: ReceivedView
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: RegisterView
     }
   ]
 })

@@ -1,6 +1,6 @@
 <script setup>
 //import { ref } from 'vue'
-import OwnLogin from '../components/auth/OwnLogin.vue'
+import OwnRegister from '../components/auth/OwnRegister.vue'
 </script>
 
 <template>
@@ -10,11 +10,11 @@ import OwnLogin from '../components/auth/OwnLogin.vue'
         <div class="card">
           <nav class="menu">
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
-              <div class="nav-link active">LOGIN</div>
+              <div class="nav-link active">REGISTER</div>
             </div>
           </nav>
           <div class="card-body">
-            <OwnLogin />
+            <OwnRegister />
           </div>
         </div>
       </div>

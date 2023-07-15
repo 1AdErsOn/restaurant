@@ -17,7 +17,7 @@ const clicked = ref(prop.linkData.active)
 
 <template>
   <li class="nav-item" @click="clicked = true">
-    <RouterLink class="nav-link fw-bold" :class="{ active: clicked }" :to="linkData.url">{{
+    <RouterLink class="nav-link" :class="{ active: clicked }" :to="linkData.url">{{
       linkData.tittle
     }}</RouterLink>
   </li>
