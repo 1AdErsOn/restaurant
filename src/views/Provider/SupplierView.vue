@@ -1,5 +1,5 @@
 <script setup>
-import OwnSupplier from '../components/supplier/OwnSupplier.vue'
+import OwnSupplier from '../../components/supplier/OwnSupplier.vue'
 </script>
 
 <template>

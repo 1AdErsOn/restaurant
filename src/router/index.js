@@ -1,42 +1,90 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import HomeView from '../views/HomeView.vue'
-const AuthView = () => import('../views/AuthView.vue')
-const ProfileView = () => import('../views/ProfileView.vue')
-const UserView = () => import('../views/UserView.vue')
-const PointSaleView = () => import('../views/PointSaleView.vue')
-const ProductView = () => import('../views/ProductView.vue')
 const TaskView = () => import('../views/TaskView.vue')
-const DailyView = () => import('../views/DailyView.vue')
-const AdminView = () => import('../views/AdminView.vue')
-const SupplierView = () => import('../views/SupplierView.vue')
-const StockView = () => import('../views/StockView.vue')
-const ReceivedView = () => import('../views/ReceivedView.vue')
-const RegisterView = () => import('../views/RegisterView.vue')
 
 const routes = [
-  { path: '/', name: 'home', component: HomeView },
-  { path: '/auth', name: 'auth', component: AuthView },
-  { path: '/profile', name: 'profile', component: ProfileView },
-  { path: '/admin', name: 'admin', component: AdminView },
-  { path: '/user', name: 'user', component: UserView },
-  { path: '/point-sale', name: 'point', component: PointSaleView },
-  { path: '/product', name: 'product', component: ProductView },
-  { path: '/task', name: 'task', component: TaskView },
-  { path: '/daily', name: 'daily', component: DailyView },
-  { path: '/supplier', name: 'supplier', component: SupplierView },
-  { path: '/stock', name: 'stock', component: StockView },
-  { path: '/received', name: 'received', component: ReceivedView },
-  { path: '/register', name: 'register', component: RegisterView },
-  {
-    path: '/orders',
-    name: 'orders',
-    component: () => import('../views/OrderView.vue')
-  },
+  { path: '/', name: 'Home', component: HomeView },
+  { path: '/task', name: 'Task', component: TaskView },
   {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: () => import('../views/NotFound.vue')
+  },
+  { 
+    path: '/auth', 
+    name: 'Auth', 
+    component: () => import('../views/Auth/AuthView.vue')
+  },
+  { 
+    path: '/register', 
+    name: 'Register', 
+    component: () => import('../views/Auth/RegisterView.vue') 
+  },
+  { 
+    path: '/profile', 
+    name: 'Profile', 
+    component: () => import('../views/Auth/ProfileView.vue')
+  },
+  { 
+    path: '/user', 
+    name: 'User', 
+    component: () => import('../views/Auth/UserView.vue') 
+  },
+  { 
+    path: '/product', 
+    name: 'Product', 
+    component: () => import('../views/Inventory/ProductView.vue') 
+  },
+  { 
+    path: '/received', 
+    name: 'Received', 
+    component: () => import('../views/Inventory/ReceivedView.vue') 
+  },
+  {
+    path: '/client',
+    name: 'Client',
+    component: () => import('../views/POS/ClientView.vue'),
+  },
+  { 
+    path: '/daily', 
+    name: 'Daily', 
+    component: () => import('../views/POS/DailyView.vue') 
+  },
+  {
+    path: '/order',
+    name: 'Order',
+    component: () => import('../views/POS/OrderView.vue')
+  },
+  {
+    path: '/pay',
+    name: 'Pay',
+    component: () => import('../views/POS/PayView.vue'),
+  },
+  { 
+    path: '/point-sale', 
+    name: 'PointSale', 
+    component: () => import('../views/POS/PointSaleView.vue') 
+  },
+  {
+    path: '/payment',
+    name: 'Payment',
+    component: () => import('../views/Provider/PaymentView.vue')
+  },
+  { 
+    path: '/supplier', 
+    name: 'Supplier', 
+    component: () => import('../views/Provider/SupplierView.vue') 
+  },
+  { 
+    path: '/admin', 
+    name: 'Admin', 
+    component: () => import('../views/Setting/AdminView.vue')
+  },
+  { 
+    path: '/stock', 
+    name: 'Stock', 
+    component: () => import('../views/Setting/StockView.vue') 
   }
 ]
 

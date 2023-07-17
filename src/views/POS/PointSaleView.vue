@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import OwnSale from '../components/point_sale/OwnSale.vue'
+import OwnSale from '../../components/point_sale/OwnSale.vue'
 
 const sales = ref(false)
 const pos = ref(false)

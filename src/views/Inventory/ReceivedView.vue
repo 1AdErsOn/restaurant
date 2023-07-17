@@ -1,5 +1,5 @@
 <script setup>
-import OwnReceived from '../components/supplier/OwnReceived.vue'
+import OwnReceived from '../../components/supplier/OwnReceived.vue'
 </script>
 
 <template>

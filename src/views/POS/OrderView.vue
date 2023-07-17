@@ -1,8 +1,8 @@
 <script setup>
 import { ref } from 'vue'
-import OwnTable from '../components/OwnTable.vue'
-import OwnCard from '../components/OwnCard.vue'
-import DetailOrden from '../components/daily/DetailOrden.vue'
+import OwnTable from '../../components/OwnTable.vue'
+import OwnCard from '../../components/OwnCard.vue'
+import DetailOrden from '../../components/daily/DetailOrden.vue'
 
 const details = ref(false)
 /* const prop = defineProps({
@@ -51,6 +51,9 @@ onMounted(() => {
                   <td>
                     <span class="badge rounded-pill text-bg-info">pagado</span>
                   </td>
+                </tr>
+                <tr>
+                  <td colspan="7"></td>
                 </tr>
               </template>
             </OwnTable>

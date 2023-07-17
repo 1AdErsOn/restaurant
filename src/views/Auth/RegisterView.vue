@@ -1,6 +1,6 @@
 <script setup>
 //import { ref } from 'vue'
-import OwnRegister from '../components/auth/OwnRegister.vue'
+import OwnRegister from '../../components/auth/OwnRegister.vue'
 </script>
 
 <template>

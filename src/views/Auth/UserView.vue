@@ -1,14 +1,15 @@
 <script setup>
-//import { ref } from 'vue'
-import OwnProducts from '../components/product/OwnProducts.vue'
+import OwnUser from '../../components/supplier/OwnUser.vue'
 </script>
 
 <template>
   <div class="container">
     <div class="card mt-3">
       <div class="card-body">
-        <OwnProducts />
+        <OwnUser />
       </div>
     </div>
   </div>
 </template>
+
+<style scoped></style>

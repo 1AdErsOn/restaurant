@@ -1,6 +1,6 @@
 <script setup>
 //import { ref } from 'vue'
-import OwnLogin from '../components/auth/OwnLogin.vue'
+import OwnLogin from '../../components/auth/OwnLogin.vue'
 </script>
 
 <template>

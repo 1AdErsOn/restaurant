@@ -8,7 +8,7 @@ const prop = defineProps({
   }
 })
 //const emit = defineEmits(['isNaved'])
-const clicked = ref(prop.linkData.active)
+const clicked = ref(prop.linkData.options)
 /* const hancleClick = () => {
   clicked.value = true
   emit('isNaved', prop.linkData.id)
@@ -16,10 +16,17 @@ const clicked = ref(prop.linkData.active)
 </script>
 
 <template>
-  <li class="nav-item" @click="clicked = true">
-    <RouterLink class="nav-link" :class="{ active: clicked }" :to="linkData.url">{{
-      linkData.tittle
-    }}</RouterLink>
+  <li class="nav-item dropdown" @click="clicked = !clicked">
+    <button class="btn btn-primary dropdown-toggle" type="button">
+      {{ linkData.tittle }}
+    </button>
+    <ul class="dropdown-menu" :class="{show:clicked}">
+      <li v-for="menu of linkData.subMenu" :key="menu.id">
+        <RouterLink class="dropdown-item" :to="menu.url">
+          {{ menu.tittle }}
+        </RouterLink>
+      </li>
+    </ul>
   </li>
 </template>
 
