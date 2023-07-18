@@ -30,7 +30,8 @@ const modelUser = reactive({
   firstName: '',
   lastName: '',
   email: '',
-  role: ''
+  puesto: '',
+  phone: 0
 })
 const handleUpdatePass = () => {
   if (modelPass.curPass == '' || modelPass.newPass == '' || modelPass.confNewPass == '') {
@@ -163,15 +164,30 @@ const handleDeleteUser = () => {
                 placeholder="Enter your email address"
               />
             </div>
-            <!-- Form Group (Roles)-->
-            <div class="mb-3" v-if="isAdmin">
-              <label class="small mb-1">Role</label>
-              <select v-model="modelUser.role" class="form-select">
-                <option value="">Select a role:</option>
-                <option value="admin">Administrator</option>
-                <option value="user">Usuario</option>
-                <option value="client">Cliente</option>
-              </select>
+            <!-- Form Row-->
+            <div class="row gx-3 mb-3">
+              <!-- Form Group (trabajo)-->
+              <div class="col-md-6">
+                <label class="small mb-1" for="inputWork">Puesto de Trabajo</label>
+                <input
+                  v-model="modelUser.puesto"
+                  class="form-control"
+                  id="inputWork"
+                  type="text"
+                  placeholder="Enter your Work"
+                />
+              </div>
+              <!-- Form Group (last name)-->
+              <div class="col-md-6">
+                <label class="small mb-1" for="inputCel">Movil</label>
+                <input
+                  v-model="modelUser.phone"
+                  class="form-control"
+                  id="inputCel"
+                  type="text"
+                  placeholder="Enter your Phone number"
+                />
+              </div>
             </div>
             <!-- Submit button-->
             <button class="btn btn-outline-primary" type="button">Save changes</button>

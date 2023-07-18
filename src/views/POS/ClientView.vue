@@ -33,7 +33,9 @@ import OwnCard from '../../components/OwnCard.vue'
                     <span class="badge rounded-pill text-bg-info">New</span>
                   </td>
                 </tr>
-                <tr><td colspan="4"></td></tr>
+                <tr>
+                  <td colspan="4"></td>
+                </tr>
               </template>
             </OwnTable>
           </div>
@@ -46,7 +48,11 @@ import OwnCard from '../../components/OwnCard.vue'
                       <th scope="row">Nombres</th>
                       <td>
                         <fieldset disabled>
-                          <input type="text" class="form-control" placeholder="Aderson" />
+                          <input
+                            type="text"
+                            class="form-control form-control-sm"
+                            placeholder="Aderson"
+                          />
                         </fieldset>
                       </td>
                     </tr>
@@ -54,7 +60,11 @@ import OwnCard from '../../components/OwnCard.vue'
                       <th scope="row">Correo</th>
                       <td>
                         <fieldset disabled>
-                          <input type="email" class="form-control" placeholder="java@gmail.com" />
+                          <input
+                            type="email"
+                            class="form-control form-control-sm"
+                            placeholder="java@gmail.com"
+                          />
                         </fieldset>
                       </td>
                     </tr>
@@ -62,7 +72,11 @@ import OwnCard from '../../components/OwnCard.vue'
                       <th scope="row">Itentificacion</th>
                       <td>
                         <fieldset disabled>
-                          <input type="number" class="form-control" placeholder="70297440" />
+                          <input
+                            type="number"
+                            class="form-control form-control-sm"
+                            placeholder="70297440"
+                          />
                         </fieldset>
                       </td>
                     </tr>

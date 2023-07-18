@@ -11,45 +11,57 @@ const routes = [
     name: 'NotFound',
     component: () => import('../views/NotFound.vue')
   },
-  { 
-    path: '/auth', 
-    name: 'Auth', 
+  {
+    path: '/auth',
+    name: 'Auth',
     component: () => import('../views/Auth/AuthView.vue')
   },
-  { 
-    path: '/register', 
-    name: 'Register', 
-    component: () => import('../views/Auth/RegisterView.vue') 
+  {
+    path: '/pay-user',
+    name: 'PayUser',
+    component: () => import('../views/Auth/PayUserView.vue')
   },
-  { 
-    path: '/profile', 
-    name: 'Profile', 
-    component: () => import('../views/Auth/ProfileView.vue')
+  {
+    path: '/pay-user/:id',
+    name: 'EditPay',
+    component: () => import('../views/Auth/EditPayView.vue'),
+    props: true
   },
-  { 
-    path: '/user', 
-    name: 'User', 
-    component: () => import('../views/Auth/UserView.vue') 
+  {
+    path: '/register',
+    name: 'Register',
+    component: () => import('../views/Auth/RegisterView.vue')
   },
-  { 
-    path: '/product', 
-    name: 'Product', 
-    component: () => import('../views/Inventory/ProductView.vue') 
+  {
+    path: '/profile/:id',
+    name: 'Profile',
+    component: () => import('../views/Auth/ProfileView.vue'),
+    props: true
   },
-  { 
-    path: '/received', 
-    name: 'Received', 
-    component: () => import('../views/Inventory/ReceivedView.vue') 
+  {
+    path: '/user',
+    name: 'User',
+    component: () => import('../views/Auth/UserView.vue')
+  },
+  {
+    path: '/product',
+    name: 'Product',
+    component: () => import('../views/Inventory/ProductView.vue')
+  },
+  {
+    path: '/received',
+    name: 'Received',
+    component: () => import('../views/Inventory/ReceivedView.vue')
   },
   {
     path: '/client',
     name: 'Client',
-    component: () => import('../views/POS/ClientView.vue'),
+    component: () => import('../views/POS/ClientView.vue')
   },
-  { 
-    path: '/daily', 
-    name: 'Daily', 
-    component: () => import('../views/POS/DailyView.vue') 
+  {
+    path: '/daily',
+    name: 'Daily',
+    component: () => import('../views/POS/DailyView.vue')
   },
   {
     path: '/order',
@@ -59,32 +71,44 @@ const routes = [
   {
     path: '/pay',
     name: 'Pay',
-    component: () => import('../views/POS/PayView.vue'),
+    component: () => import('../views/POS/PayView.vue')
   },
-  { 
-    path: '/point-sale', 
-    name: 'PointSale', 
-    component: () => import('../views/POS/PointSaleView.vue') 
+  {
+    path: '/point-sale',
+    name: 'PointSale',
+    component: () => import('../views/POS/PointSaleView.vue')
   },
   {
     path: '/payment',
     name: 'Payment',
     component: () => import('../views/Provider/PaymentView.vue')
   },
-  { 
-    path: '/supplier', 
-    name: 'Supplier', 
-    component: () => import('../views/Provider/SupplierView.vue') 
+  {
+    path: '/payment/:id',
+    name: 'PaymentId',
+    component: () => import('../views/Provider/EditPaymentView.vue'),
+    props: true
   },
-  { 
-    path: '/admin', 
-    name: 'Admin', 
+  {
+    path: '/provider/:id',
+    name: 'Supplier',
+    component: () => import('../views/Provider/EditProviderView.vue'),
+    props: true
+  },
+  {
+    path: '/provider',
+    name: 'Provider',
+    component: () => import('../views/Provider/ProviderView.vue')
+  },
+  {
+    path: '/admin',
+    name: 'Admin',
     component: () => import('../views/Setting/AdminView.vue')
   },
-  { 
-    path: '/stock', 
-    name: 'Stock', 
-    component: () => import('../views/Setting/StockView.vue') 
+  {
+    path: '/stock',
+    name: 'Stock',
+    component: () => import('../views/Setting/StockView.vue')
   }
 ]
 

@@ -81,8 +81,8 @@ import OwnCard from '../../components/OwnCard.vue'
         </div>
       </template>
     </OwnCard>
-        
-        <!-- <OwnOrder
+
+    <!-- <OwnOrder
           v-if="orders"
           @point-sale="sales = true"
           @close-point-sale="orders = false"

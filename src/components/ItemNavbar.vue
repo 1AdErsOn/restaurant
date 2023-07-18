@@ -20,7 +20,7 @@ const clicked = ref(prop.linkData.options)
     <button class="btn btn-primary dropdown-toggle" type="button">
       {{ linkData.tittle }}
     </button>
-    <ul class="dropdown-menu" :class="{show:clicked}">
+    <ul class="dropdown-menu" :class="{ show: clicked }">
       <li v-for="menu of linkData.subMenu" :key="menu.id">
         <RouterLink class="dropdown-item" :to="menu.url">
           {{ menu.tittle }}

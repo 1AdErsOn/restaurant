@@ -39,15 +39,14 @@ const options = ref(false)
 <template>
   <nav class="navbar bg-primary">
     <div class="container-fluid">
-      <RouterLink class="navbar-brand mb-0 h1" to="/"
-        >La Gran Parada</RouterLink
-      >
+      <RouterLink class="navbar-brand mb-0 h1" to="/">La Gran Parada</RouterLink>
       <div
         class="collapse navbar-collapse"
         :class="{ show: collapsed }"
         v-show="collapsed && ismenu"
       >
-        <ul v-if="loged" class="nav justify-content-center nav-underline mb-2 mb-lg-0"> <!--nav justify-content-center nav-underline mb-2 mb-lg-0-->
+        <ul v-if="loged" class="nav justify-content-center nav-underline mb-2 mb-lg-0">
+          <!--nav justify-content-center nav-underline mb-2 mb-lg-0-->
           <li class="nav-item">
             <RouterLink class="nav-link active" to="/point-sale">Tablero</RouterLink>
           </li>
@@ -57,9 +56,7 @@ const options = ref(false)
         </ul>
         <ul v-else class="nav justify-content-center mb-2 mb-lg-0">
           <li class="nav-item me-3">
-            <RouterLink class="btn btn-outline-light" to="/auth"
-              >START</RouterLink
-            >
+            <RouterLink class="btn btn-outline-light" to="/auth">START</RouterLink>
           </li>
         </ul>
       </div>

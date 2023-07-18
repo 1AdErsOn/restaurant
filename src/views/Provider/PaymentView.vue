@@ -1,78 +1,117 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import OwnTable from '../../components/OwnTable.vue'
 import OwnCard from '../../components/OwnCard.vue'
-const list = ref(true)
+//import OwnPayment from '../../components/supplier/OwnPayment.vue';
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+const showList = computed(() => {
+  return picked.value == 'List' ? true : false
+})
+const picked = ref('List')
+const handleShow = (idPay = 0) => {
+  router.push(`/payment/${idPay}`)
+}
+const handleNew = () => {
+  router.push('/payment/0')
+}
 </script>
 
 <template>
   <div class="container">
     <div class="row mt-3">
-      <div class="col col-md-12" v-if="list">
+      <div class="col col-md-12">
         <OwnCard>
           <template #body>
             <div class="d-flex align-items-start justify-content-between">
               <div class="btn-group" role="group">
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
+                <input
+                  v-model="picked"
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio1"
+                  value="Grid"
+                />
                 <label class="btn btn-outline-info" for="btnradio1">Grid</label>
 
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" checked>
+                <input
+                  v-model="picked"
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio2"
+                  value="List"
+                />
                 <label class="btn btn-outline-info" for="btnradio2">Lista</label>
-
               </div>
               <div class="d-flex">
                 <h3 class="me-2">Pagos</h3>
                 <input class="form-control" type="search" placeholder="Search" />
               </div>
-              <button type="button" class="btn btn-outline-primary">Nuevo</button>
+              <button type="button" class="btn btn-outline-primary" @click="handleNew">
+                Nuevo
+              </button>
             </div>
-            <OwnTable>
+            <div class="row row-cols-4 mt-3" v-if="!showList">
+              <div class="col">
+                <div class="card" style="max-width: 540px">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between g-0">
+                      <div class="d-flex">
+                        <h5 class="card-title">PCSH1/0001</h5>
+                      </div>
+                      <div class="d-flex">
+                        <h5 class="card-title">Date</h5>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-between g-0">
+                      <div class="d-flex">
+                        <p class="card-text">RICO POLLO</p>
+                      </div>
+                      <div class="d-flex">
+                        <p class="card-text">100</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">Column</div>
+              <div class="col">Column</div>
+              <div class="col">Column</div>
+            </div>
+            <OwnTable v-else>
               <template #head>
                 <tr>
                   <th scope="col">#</th>
                   <th scope="col">Fecha</th>
                   <th scope="col">Numero</th>
-                  <th scope="col">Libro Diario</th>
                   <th scope="col">Metodo de Pago</th>
-                  <th scope="col">Cliente</th>
+                  <th scope="col">Proveedor</th>
                   <th scope="col">Importe</th>
                   <th scope="col">Estado</th>
                 </tr>
               </template>
               <template #body>
-                <tr>
+                <tr @click="handleShow('1')">
                   <td scope="row">check</td>
                   <td>date</td>
                   <td>Somthing</td>
                   <td>Efectivo</td>
-                  <td>Manual</td>
-                  <td>Aderson</td>
+                  <td>Rico Pollo</td>
                   <td>1999</td>
                   <td>
                     <span class="badge rounded-pill text-bg-info">Publicado</span>
                   </td>
                 </tr>
-                <tr><td colspan="8"></td></tr>
+                <tr>
+                  <td colspan="7"></td>
+                </tr>
               </template>
             </OwnTable>
           </template>
         </OwnCard>
-      </div>
-      <div class="col col-md-8" v-else>
-        <!-- <div class="card mb-3" style="max-width: 540px;">
-          <div class="row g-0">
-            <div class="col-md-4">
-            <img src="Image Source" class="img-fluid rounded-start" alt="Card title">
-            </div>
-            <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-            </div>
-          </div>
-        </div> -->
       </div>
     </div>
   </div>

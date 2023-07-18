@@ -33,17 +33,17 @@ export default [
       {
         id: 1,
         tittle: 'Registrar',
-        url: '/'
+        url: '/register'
       },
       {
         id: 2,
         tittle: 'Permisos',
-        url: '/'
+        url: '/user'
       },
       {
         id: 3,
         tittle: 'Pagos',
-        url: '/'
+        url: '/pay-user'
       }
     ]
   },
@@ -65,7 +65,12 @@ export default [
       {
         id: 3,
         tittle: 'Pagos',
-        url: '/'
+        url: '/payment'
+      },
+      {
+        id: 4,
+        tittle: 'Empresas',
+        url: '/provider'
       }
     ]
   },
@@ -125,6 +130,18 @@ export default [
   },
   {
     id: 4,
+    tittle: 'Herramientas',
+    options: false,
+    subMenu: [
+      {
+        id: 1,
+        tittle: 'Tareas',
+        url: '/task'
+      }
+    ]
+  },
+  {
+    id: 5,
     tittle: 'Configuracion',
     options: false,
     subMenu: [
@@ -144,7 +161,7 @@ export default [
         url: '/'
       }
     ]
-  }/* ,
+  } /* ,
   {
     id: 6,
     tittle: 'Productos',

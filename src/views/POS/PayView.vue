@@ -31,7 +31,9 @@ import OwnCard from '../../components/OwnCard.vue'
                   <td>Shop/0001</td>
                   <td>500</td>
                 </tr>
-                <tr><td colspan="4"></td></tr>
+                <tr>
+                  <td colspan="4"></td>
+                </tr>
               </template>
             </OwnTable>
           </div>
