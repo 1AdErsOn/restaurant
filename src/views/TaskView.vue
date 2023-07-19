@@ -3,10 +3,13 @@ import { ref } from 'vue'
 import OwnTasks from '../components/task/OwnTasks.vue'
 import { useTaskStore } from '../stores/taskStore.js'
 import { boardService } from '../services/BoardService.js'
+import { storeToRefs } from 'pinia'
 
 const store = useTaskStore()
+const { boards } = storeToRefs(store)
 const { addNewBoard, loadBoard } = store
 const isLoading = ref(true)
+const inputs = ref(true)
 async function preFetch() {
   if (store.boards.length === 0) {
     const boards = await boardService.getBoards()
@@ -34,6 +37,15 @@ const handleNewBoard = () => {
         </button>
       </div>
     </div>
-    <OwnTasks />
+    <div class="boards row row-cols-auto align-items-start justify-content-around gap-2 mt-3">
+      <template v-for="board of boards" :key="board.id">
+        <OwnTasks
+          :board="board"
+          :input="inputs"
+          @disable-input="inputs = false"
+          @active-input="inputs = true"
+        />
+      </template>
+    </div>
   </div>
 </template>

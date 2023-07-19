@@ -94,7 +94,9 @@ const useTaskStore = defineStore('tasks', () => {
   const updateTask = (idBoard = '', idTask = '', tittle = '') => {
     board.value = boards.find((item) => item.id === idBoard)
     const task = board.value.tasks.find((item) => item.id === idTask)
-    task.tittle = tittle
+    if (task) {
+      task.tittle = tittle
+    }
   }
   const allCompleted = (idBoard = '') => {
     board.value = boards.find((item) => item.id === idBoard)
