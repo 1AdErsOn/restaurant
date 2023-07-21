@@ -55,7 +55,7 @@ export default [
       {
         id: 1,
         tittle: 'Cuentas',
-        url: '/'
+        url: '/purchase'
       },
       {
         id: 2,
@@ -119,11 +119,6 @@ export default [
       {
         id: 3,
         tittle: 'Entregas',
-        url: '/'
-      },
-      {
-        id: 3,
-        tittle: 'Devoluciones',
         url: '/'
       }
     ]

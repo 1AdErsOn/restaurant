@@ -112,6 +112,17 @@ const routes = [
     component: () => import('../views/Provider/ProviderView.vue')
   },
   {
+    path: '/purchase',
+    name: 'Purchase',
+    component: () => import('../views/Provider/PurchaseView.vue')
+  },
+  {
+    path: '/purchase/:id',
+    name: 'PurchaseId',
+    component: () => import('../views/Provider/EditPurchaseView.vue'),
+    props: true
+  },
+  {
     path: '/admin',
     name: 'Admin',
     component: () => import('../views/Setting/AdminView.vue')

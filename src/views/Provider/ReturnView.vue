@@ -2,7 +2,6 @@
 import { ref, computed } from 'vue'
 import OwnTable from '../../components/OwnTable.vue'
 import OwnCard from '../../components/OwnCard.vue'
-//import OwnPayment from '../../components/supplier/OwnPayment.vue';
 import { useRouter } from 'vue-router'
 
 const router = useRouter()

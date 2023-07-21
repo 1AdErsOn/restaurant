@@ -1,9 +1,10 @@
 <script setup>
+import { ref } from 'vue'
 import OwnCard from '../../components/OwnCard.vue'
 import OwnPayment from '../../components/supplier/OwnPayment.vue'
-import { ref } from 'vue'
-import router from '../../router'
+import { useRouter } from 'vue-router'
 
+const router = useRouter()
 const prop = defineProps({
   id: {
     required: true,

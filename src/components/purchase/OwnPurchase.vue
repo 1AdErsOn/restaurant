@@ -1,51 +1,115 @@
 <script setup>
-import OwnTable from '../OwnTable.vue'
+import OwnCard from '../OwnCard.vue'
+import ItemPurchase from './ItemPurchase.vue'
+
+const prop = defineProps({
+  idPay: {
+    required: false,
+    type: Number,
+    default: 0
+  },
+  currentPay: {
+    required: false,
+    type: Object
+  }
+})
+const emit = defineEmits(['payCancel', 'newPay'])
+const handleCancel = () => {
+  emit('payCancel')
+}
+const handleConfirm = () => {
+  emit('newPay')
+}
+const fetchPay = () => {
+  if (prop.idPay !== 0) {
+    console.log('log pay')
+  }
+}
+fetchPay()
 </script>
 
 <template>
-  <div class="row">
-    <div class="col-xl-6">
-      <h3>Ordenes de Compra</h3>
-      <div class="d-flex justify-content-between">
-        <div class="d-flex">
-          <select class="d-flex form-select" id="filter">
-            <option selected>Filtro</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
+  <div class="col col-md-8">
+    <OwnCard class="mt-3">
+      <template #body>
+        <p>Factura de Proveedor</p>
+        <h3>Borrador</h3>
+        <div class="row">
+          <div class="co col-md-6">
+            <table class="table table-borderless">
+              <tbody>
+                <tr>
+                  <th scope="row">Proveedor</th>
+                  <td>
+                    <select class="form-select form-select-sm">
+                      <option selected>Rico Pollo</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Referencia</th>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control form-control-sm"
+                      placeholder="Boleta N:"
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="co col-md-6">
+            <table class="table table-borderless">
+              <tbody>
+                <tr>
+                  <th scope="row">Fecha</th>
+                  <td>
+                    <input type="date" class="form-control form-control-sm" />
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Referencia</th>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control form-control-sm"
+                      placeholder="Pago: ..."
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ItemPurchase :mode-edit="true" />
+          <div class="col col-md-8"></div>
+          <div class="col col-md-4">
+            <table class="table table-bordered border-primary">
+              <tbody>
+                <tr>
+                  <th scope="row">Descuento</th>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <th scope="row">Total</th>
+                  <td>96</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-        <div class="d-flex">
-          <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-outline-primary" @click="handleConfirm">
+            Confirmar
+          </button>
+          <button type="button" class="btn btn-outline-warning" @click="handleCancel">
+            Cancelar
+          </button>
         </div>
-      </div>
-      <OwnTable>
-        <template #head>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Fecha de Creacion</th>
-            <th scope="col">Codigo</th>
-            <th scope="col">Proveedor</th>
-            <th scope="col">Producto</th>
-            <th scope="col">Estado</th>
-            <th scope="col">Accion</th>
-          </tr>
-        </template>
-        <template #body>
-          <tr>
-            <th scope="row">1</th>
-            <td>Pollo 1/4</td>
-            <td>Consumible</td>
-            <td>$/12.00</td>
-            <td>Platos</td>
-            <td>Platos</td>
-            <td>
-              <button class="btn btn-outline-info" @click.prevent="">Edit</button>
-              <button class="btn btn-outline-success">Abilit</button>
-            </td>
-          </tr>
-        </template>
-      </OwnTable>
-    </div>
+      </template>
+    </OwnCard>
   </div>
 </template>
