@@ -1,6 +1,9 @@
 <script setup>
 import { reactive } from 'vue'
 import OwnAlert from '../OwnAlert.vue'
+import { useRoute } from 'vue-router'
+
+const router = useRoute()
 const newUser = reactive({
   firstName: '',
   lastName: '',
@@ -18,7 +21,7 @@ const showAlert = (message, variant = 'warning') => {
   alert.variant = variant
   alert.show = true
 }
-const handleRegister = () => {
+const handleRegister = async () => {
   if (
     newUser.name == '' ||
     newUser.email == '' ||
@@ -28,6 +31,7 @@ const handleRegister = () => {
     showAlert('Fill all the fields')
     return
   }
+  router.push('/point-sale')
   //registerUser
   console.log(newUser)
 }

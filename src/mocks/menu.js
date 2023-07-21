@@ -60,7 +60,7 @@ export default [
       {
         id: 2,
         tittle: 'Devoluciones',
-        url: '/'
+        url: '/return'
       },
       {
         id: 3,
@@ -87,7 +87,7 @@ export default [
       {
         id: 2,
         tittle: 'Sesiones',
-        url: 'daily'
+        url: '/daily'
       },
       {
         id: 3,

@@ -26,5 +26,3 @@ const handleCancel = () => {
     </div>
   </div>
 </template>
-
-<style scoped></style>

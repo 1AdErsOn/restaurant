@@ -11,5 +11,3 @@ import OwnStock from '../components/product/OwnStock.vue'
     </div>
   </div>
 </template>
-
-<style scoped></style>

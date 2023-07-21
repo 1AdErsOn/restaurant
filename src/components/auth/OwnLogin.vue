@@ -1,6 +1,9 @@
 <script setup>
 import { reactive } from 'vue'
 import OwnAlert from '../OwnAlert.vue'
+import { useRoute } from 'vue-router'
+
+const router = useRoute()
 const user = reactive({
   email: '',
   password: ''
@@ -15,11 +18,16 @@ const showAlert = (message, variant = 'warning') => {
   alert.variant = variant
   alert.show = true
 }
-const handleLogin = () => {
+const getToken = async () => {
+  await fetch('/api/login')
+}
+const handleLogin = async () => {
   if (user.email == '' || user.password == '') {
     showAlert('Todos los campos son requeridos')
     return
   }
+  await getToken()
+  router.push('/point-sale')
   //loginUser
   console.log(user)
 }

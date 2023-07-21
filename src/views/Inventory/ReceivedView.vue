@@ -11,5 +11,3 @@ import OwnReceived from '../../components/supplier/OwnReceived.vue'
     </div>
   </div>
 </template>
-
-<style scoped></style>

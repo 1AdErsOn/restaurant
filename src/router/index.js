@@ -79,6 +79,17 @@ const routes = [
     component: () => import('../views/POS/PointSaleView.vue')
   },
   {
+    path: '/return',
+    name: 'Return',
+    component: () => import('../views/Provider/ReturnView.vue')
+  },
+  {
+    path: '/return/:id',
+    name: 'ReturnId',
+    component: () => import('../views/Provider/EditReturnView.vue'),
+    props: true
+  },
+  {
     path: '/payment',
     name: 'Payment',
     component: () => import('../views/Provider/PaymentView.vue')

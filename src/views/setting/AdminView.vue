@@ -19,5 +19,3 @@ import SystenInfo from '../components/setting/SystenInfo.vue'
     </div>
   </div>
 </template>
-
-<style scoped></style>

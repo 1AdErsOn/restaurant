@@ -96,5 +96,3 @@ const handleClick = (idUser) => {
     </OwnCard>
   </div>
 </template>
-
-<style scoped></style>

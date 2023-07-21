@@ -14,5 +14,3 @@ const loged = ref(true)
   </main>
   <OwnFooter />
 </template>
-
-<style scoped></style>

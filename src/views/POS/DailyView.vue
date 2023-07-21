@@ -90,5 +90,3 @@ import OwnCard from '../../components/OwnCard.vue'
         <OwnDaily v-else @start-point-sale="sales = true" /> -->
   </div>
 </template>
-
-<style scoped></style>
