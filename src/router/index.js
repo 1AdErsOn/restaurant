@@ -49,9 +49,14 @@ const routes = [
     component: () => import('../views/Inventory/ProductView.vue')
   },
   {
-    path: '/received',
-    name: 'Received',
-    component: () => import('../views/Inventory/ReceivedView.vue')
+    path: '/receipt',
+    name: 'Receipt',
+    component: () => import('../views/Inventory/ReceiptView.vue')
+  },
+  {
+    path: '/delivery',
+    name: 'Delivery',
+    component: () => import('../views/Inventory/DeliveryView.vue')
   },
   {
     path: '/client',

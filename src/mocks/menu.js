@@ -114,12 +114,12 @@ export default [
       {
         id: 2,
         tittle: 'Recibos',
-        url: '/'
+        url: '/receipt'
       },
       {
         id: 3,
         tittle: 'Entregas',
-        url: '/'
+        url: '/delivery'
       }
     ]
   },
